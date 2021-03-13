@@ -4,6 +4,7 @@ import FoodBox from "../FoodBox/FoodBox";
 import AddNewFood from "../AddNewFood/AddNewFood";
 import Search from "../Search/Search";
 import TodayFood from "../TodayFood/TodayFood";
+import { getFoods } from "../../services/foods.service";
 
 const mockedFoods = [
   {
@@ -25,6 +26,10 @@ class FoodList extends Component {
     todayFood: [],
     totalCalories: 0,
   };
+
+  componentDidMount() {
+    getFoods().then(({ data }) => console.log("data", data));
+  }
 
   toggleForm = () => {
     this.setState({ showForm: !this.state.showForm });

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { createFood } from "../../services/foods.service";
 
 class AddNewFood extends Component {
   state = {
@@ -15,10 +16,12 @@ class AddNewFood extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
     const newFood = this.state;
     this.props.addFood(newFood);
+    const food = await createFood(newFood);
+    console.log("food", food);
     this.setState({
       name: "",
       calories: "",
@@ -33,7 +36,6 @@ class AddNewFood extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          
           <div className="field">
             <label className="label">Name</label>
             <div className="control">
