@@ -1,11 +1,12 @@
 import React from "react";
-import { Todos } from "./views/Todos";
+import FoodList from './components/FoodList';
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Todos />
+      <header className="App-header">App</header>
+      <FoodList />
     </div>
   );
 }
