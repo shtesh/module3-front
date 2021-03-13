@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./../App.css";
 
 class FoodBox extends Component {
   state = {
@@ -12,7 +11,14 @@ class FoodBox extends Component {
   };
 
   render() {
-    const { name, calories, image, fat, carbohydrates, protein } = this.props.food;
+    const {
+      name,
+      calories,
+      image,
+      fat,
+      carbohydrates,
+      protein,
+    } = this.props.food;
     return (
       <div className="box">
         <article className="media">

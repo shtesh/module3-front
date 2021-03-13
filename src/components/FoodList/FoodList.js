@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import shortid from 'shortid';
-//import foods from './../foods.json';
-import FoodBox from './FoodBox';
-import AddNewFood from './AddNewFood';
-import Search from "./Search";
-import TodayFood from './TodayFood';
+import shortid from "shortid";
+import FoodBox from "../FoodBox/FoodBox";
+import AddNewFood from "../AddNewFood/AddNewFood";
+import Search from "../Search/Search";
+import TodayFood from "../TodayFood/TodayFood";
 
 class FoodList extends Component {
   state = {
-    foodsList: foods,
-    filteredFoodsList: foods,
+    foodsList: [],
+    filteredFoodsList: [],
     showForm: false,
     todayFood: [],
     totalCalories: 0,
