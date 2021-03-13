@@ -5,10 +5,22 @@ import AddNewFood from "../AddNewFood/AddNewFood";
 import Search from "../Search/Search";
 import TodayFood from "../TodayFood/TodayFood";
 
+const mockedFoods = [
+  {
+    name: "food",
+    calories: 11,
+    image:
+      "https://www.besthealthmag.ca/wp-content/uploads/2019/07/junk-food-1.gif",
+    fat: 10,
+    carbohydrates: 100,
+    protein: 12,
+  },
+];
+
 class FoodList extends Component {
   state = {
-    foodsList: [],
-    filteredFoodsList: [],
+    foodsList: mockedFoods,
+    filteredFoodsList: mockedFoods,
     showForm: false,
     todayFood: [],
     totalCalories: 0,

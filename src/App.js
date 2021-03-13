@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Link } from "react-router-dom";
+import { Switch, Link, Route } from "react-router-dom";
 import FoodList from "./components/FoodList/FoodList";
 import { PrivateRoute, AnonRoute } from "./components/Routes";
 import Signup from "./components/SignupForm/SignupForm";
