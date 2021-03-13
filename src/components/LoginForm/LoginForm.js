@@ -1,23 +1,43 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
+import { useAuth } from "../../context/AuthContext.utils";
 
 export default function Login() {
-    const [formState, setFormState] = useState();
+  const initialState = {
+    email: "",
+    password: "",
+  };
+  const [formState, setFormState] = useState(initialState);
+  const auth = useAuth();
+  const handleChange = ({ target }) => {
+    setFormState({ ...formState, [target.name]: target.value });
+  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    await auth.handleLogin(formState);
+  };
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value={formState.email}
+          onChange={handleChange}
+        />
 
-    const handleChange = (e) => {
-        const {email, password} = e.target;
-        setFormState({...formState, email, password})
-    }
-return (
-<div>
-<form onSubmit={handleSubmit}>
-    <label htmlFor='email'>Email</label>
-    <input type='email' name='email' id='email' value={formState.email} onChange={handleChange}/>
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          value={formState.password}
+          onChange={handleChange}
+        />
 
-    <label htmlFor='password'>Password</label>
-    <input type='password' name='password' id='password' value={formState.password} onChange={handleChange}/>
-
-    <button type='submit'>Log Me In</button>
-</form>
-</div>
-)
+        <button type="submit">Log Me In</button>
+      </form>
+    </div>
+  );
 }
