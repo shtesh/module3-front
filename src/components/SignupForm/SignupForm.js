@@ -36,7 +36,7 @@ export default function Signup() {
           onChange={handleChange}
         />
 
-        <button type="submit">Log Me In</button>
+        <button type="submit">Sign Me Up</button>
       </form>
     </div>
   );
