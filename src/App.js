@@ -4,7 +4,7 @@ import FoodList from "./components/FoodList/FoodList";
 import { PrivateRoute, AnonRoute } from "./components/Routes";
 import Signup from "./components/SignupForm/SignupForm";
 import Login from "./components/LoginForm/LoginForm";
-import DailyGoal from "./components/DailyGoal/DailyGoal";
+import DailyGoal from "./components/DailyGoal/DailyGoalForm";
 import { useAuth } from "./context/AuthContext.utils";
 import "./App.css";
 
