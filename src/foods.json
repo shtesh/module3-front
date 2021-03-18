@@ -2,7 +2,7 @@
     {
         "name": "Yogurt",
         "calories": 114,
-        "image": ,
+        "image": "https://www.daringgourmet.com/wp-content/uploads/2019/10/How-to-Make-Yogurt-4.jpg",
         "quantity": 0,
         "fat": 5.2,
         "carbohydrates": 8.4,
@@ -12,7 +12,7 @@
     {
         "name": "Apple",
         "calories": 59,
-        "image": ,
+        "image": "https://cdn1.sph.harvard.edu/wp-content/uploads/sites/30/2018/10/apple-2711629_1920.jpg",
         "fat": 0.2,
         "carbohydrates": 15.6,
         "protein": 0.3,
@@ -20,7 +20,7 @@
     {
         "name": "Banana",
         "calories": 151,
-        "image": ,
+        "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/271157_2200-732x549.jpg",
         "fat": 0.6,
         "carbohydrates": 38.8,
         "protein": 1.9,
@@ -28,7 +28,7 @@
     {
         "name": "Pear",
         "calories": 82,
-        "image": ,
+        "image": "https://4.imimg.com/data4/UA/CL/ANDROID-46992190/product-500x500.jpeg",
         "fat": 0.2,
         "carbohydrates": 22,
         "protein": 0.5,
@@ -36,7 +36,7 @@
     {
         "name": "Peach",
         "calories": 67,
-        "image": ,
+        "image": "https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-nactarine-558x600.jpg",
         "fat": 0.4,
         "carbohydrates": 16.5,
         "protein": 1.6,
@@ -44,7 +44,7 @@
     {
         "name": "Orange",
         "calories": 53,
-        "image": ,
+        "image": "https://i.pinimg.com/originals/05/79/5a/05795a16b647118ffb6629390e995adb.jpg",
         "fat": 0.1,
         "carbohydrates": 13.2,
         "protein": 1.1,
@@ -52,7 +52,7 @@
     {
         "name": "Asparagus",
         "calories": 27,
-        "image": ,
+        "image": "https://www.jessicagavin.com/wp-content/uploads/2019/04/grilled-asparagus-3-1200.jpg",
         "fat": 0.2,
         "carbohydrates": 5.2,
         "protein": 3,
@@ -60,7 +60,7 @@
     {
         "name": "Cucumber",
         "calories": 17,
-        "image": ,
+        "image": "https://st.depositphotos.com/1000350/1936/i/600/depositphotos_19364449-stock-photo-cucumber-and-slices-isolated-over.jpg",
         "fat": 0.1,
         "carbohydrates": 4,
         "protein": 0.7,
@@ -68,7 +68,7 @@
     {
         "name": "Tomato",
         "calories": 22,
-        "image": ,
+        "image": "https://www.thermofisher.com/blog/food/wp-content/uploads/sites/5/2014/08/tomatoes.jpg",
         "fat": 0.2,
         "carbohydrates": 4.8,
         "protein": 1.2,
@@ -76,7 +76,7 @@
     {
         "name": "Lettuce",
         "calories": 5,
-        "image": ,
+        "image": "https://cdn.britannica.com/77/170677-050-F7333D51/lettuce.jpg",
         "fat": 0,
         "carbohydrates": 0.9,
         "protein": 0.4,
@@ -84,7 +84,7 @@
     {
         "name": "Eggplant",
         "calories": 35,
-        "image": ,
+        "image": "https://cdn-prod.medicalnewstoday.com/content/images/articles/279/279359/two-eggplants-on-a-wooden-table.jpg",
         "fat": 0.3,
         "carbohydrates": 8.4,
         "protein": 1.4,
@@ -92,7 +92,7 @@
     {
         "name": "Egg",
         "calories": 78,
-        "image": ,
+        "image": "https://static.scientificamerican.com/sciam/cache/file/62936F67-7783-4949-A047CD417758AE9D.jpg",
         "fat": 5.6,
         "carbohydrates": 0,
         "protein": 6.7,
@@ -100,7 +100,7 @@
     {
         "name": "Beef",
         "calories": 142,
-        "image": ,
+        "image": "https://i.pinimg.com/originals/47/64/a4/4764a447e3298472e47ce504261dfc60.jpg",
         "fat": 10,
         "carbohydrates": 0,
         "protein": 12.3,
@@ -108,7 +108,7 @@
     {
         "name": "Chicken",
         "calories": 136,
-        "image": ,
+        "image": "https://www.aldelis.com/wp-content/uploads/2017/10/beneficios-pollo.jpg",
         "fat": 8.4,
         "carbohydrates": 0,
         "protein": 13.7,
@@ -116,7 +116,7 @@
     {
         "name": "Tofu",
         "calories": 86,
-        "image": ,
+        "image": "https://www.alphafoodie.com/wp-content/uploads/2020/03/Tofu-1-of-1.jpeg",
         "fat": 4.9,
         "carbohydrates": 2.5,
         "protein": 8.6,
@@ -124,7 +124,7 @@
     {
         "name": "Pork",
         "calories": 137,
-        "image": ,
+        "image": "https://www.seriouseats.com/recipes/images/2016/02/20160208-sous-vide-pork-chop-guide-food-lab-37-1500x1125.jpg",
         "fat": 4.6,
         "carbohydrates": 1.1,
         "protein": 26.2,
@@ -133,7 +133,7 @@
     {
         "name": "Butter",
         "calories": 102,
-        "image": ,
+        "image": "https://thumbs.dreamstime.com/b/block-fresh-butter-wooden-cutting-board-sliced-against-blue-background-119564035.jpg",
         "fat": 11.2,
         "carbohydrates": 0.1,
         "protein": 0.1,
@@ -141,7 +141,7 @@
     {
         "name": "Hamburger",
         "calories": 250,
-        "image": ,
+        "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/165384.jpg",
         "fat": 10.9,
         "carbohydrates": 20,
         "protein": 17.5,
@@ -149,7 +149,7 @@
     {
         "name": "Potato",
         "calories": 130,
-        "image": ,
+        "image": "https://www.gimmesomeoven.com/wp-content/uploads/2016/03/How-To-Make-A-Baked-Potato-Recipe-2-768x1152.jpg",
         "fat": 0,
         "carbohydrates": 28.1,
         "protein": 3.2,
@@ -157,7 +157,7 @@
     {
         "name": "Rice",
         "calories": 206,
-        "image": ,
+        "image": "https://www.recipetineats.com/wp-content/uploads/2020/03/Basmati-rice.jpg",
         "fat": 0.4,
         "carbohydrates": 44.8,
         "protein": 4.3,
@@ -165,7 +165,7 @@
     {
         "name": "Whole Milk",
         "calories": 146,
-        "image": ,
+        "image": "https://cdn-bbdid.nitrocdn.com/dXLomzNlicmTFrlYeLymuuBkWLKpJPTw/assets/static/source/wp-content/uploads/2020/02/e3cc4576103c6bd810cab757e50efe4e.SkimMilk-02.jpg",
         "fat": 8,
         "carbohydrates": 11.7,
         "protein": 7.7,
@@ -173,7 +173,7 @@
     {
         "name": "Apple Cider",
         "calories": 117,
-        "image": ,
+        "image": "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2015/09/homemade-slow-cooker-apple-cider-2.jpg",
         "fat": 0,
         "carbohydrates": 29.2,
         "protein": 0,
@@ -181,7 +181,7 @@
     {
         "name":"Quinoa",
         "calories": 105,
-        "image": ,
+        "image": "https://post.healthline.com/wp-content/uploads/2020/09/quinoa-732x549-thumbnail-1.jpg",
         "fat": 1.9,
         "carbohydrates": 18.5,
         "protein": 3.8,
@@ -189,7 +189,7 @@
     {
         "name": "Granola",
         "calories": 120,
-        "image": ,
+        "image": "https://cookieandkate.com/images/2015/10/best-granola-recipe-1.jpg",
         "fat": 6.4,
         "carbohydrates": 14.7,
         "protein": 3.7,
@@ -197,7 +197,7 @@
     {
     "name": "Salmon",
     "calories": 225,
-    "image": ,
+    "image": "https://www.seriouseats.com/recipes/images/2016/08/20160826-sous-vide-salmon-46-1500x1125.jpg",
     "fat": 12,
     "carbohydrates": 0.8,
     "protein": 28.8,
