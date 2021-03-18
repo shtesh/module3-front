@@ -14,7 +14,7 @@ function App() {
       <nav>
         <button onClick={auth.handleLogout}>Log Me Out</button>
         <Link to="/login">Login</Link>
-        <Link to="signup">Signup</Link>
+        <Link to="/signup">Signup</Link>
         <Link to="/foods">Foods</Link>
       </nav>
       <Switch>
