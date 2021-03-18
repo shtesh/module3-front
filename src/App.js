@@ -12,10 +12,10 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <button onClick={auth.handleLogout}>Logout</button>
-        <Link to="/login">login</Link>
-        <Link to="signup">signup</Link>
-        <Link to="/foods">foods</Link>
+        <button onClick={auth.handleLogout}>Log Me Out</button>
+        <Link to="/login">Login</Link>
+        <Link to="/signup">Signup</Link>
+        <Link to="/foods">Foods</Link>
       </nav>
       <Switch>
         <AnonRoute exact path="/login">
@@ -27,6 +27,12 @@ function App() {
         <PrivateRoute path="/foods">
           <FoodList />
         </PrivateRoute>
+        <PrivateRoute path="/private">
+          <h2>this is private</h2>
+        </PrivateRoute>
+        <Route exact to="/">
+          <h1>Home</h1>
+        </Route>
       </Switch>
     </div>
   );
