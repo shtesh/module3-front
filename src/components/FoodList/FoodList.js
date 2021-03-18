@@ -5,6 +5,7 @@ import AddNewFood from "../AddNewFood/AddNewFood";
 import Search from "../Search/Search";
 import TodayFood from "../TodayFood/TodayFood";
 import { getFoods } from "../../services/foods.service";
+import { Route } from "react-router";
 
 const mockedFoods = [
   {
@@ -133,3 +134,26 @@ class FoodList extends Component {
 }
 
 export default FoodList;
+
+MessageSchema = new mongoose.Schema({
+  author: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+});
+
+exports.sendRequest = async (req, res) => {
+  const { userId } = req.session;
+  const { dogId } = req.params;
+  const newMessage = await Message.create({ author: userId, ...req.body });
+  const { owner: ownerId } = await Dog.findById(dogId);
+  const updatedUserWithMessage = await User.findByIdAndUpdate(ownerId, {
+    $push: { messages: newMessage._id },
+  });
+
+  res.status(200).json(updatedUserWithMessage);
+};
+
+const getMessagesSent = async (req, res) => {
+  const messages = await Message.find({
+    author: { $eq: req.session.userId },
+  });
+  res.satatus(200).json(messages);
+};
