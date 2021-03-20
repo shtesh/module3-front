@@ -16,7 +16,7 @@ export default function Signup() {
     await auth.handleSignup(formState);
   };
   return (
-    <div>
+    <div className="Signup">
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
         <input

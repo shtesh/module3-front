@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import {createDailyGoal} from "../../services/dailyGoal.service";
+import { createDailyGoal } from '../../services/dailyGoal.service';
 
 export default function DailyGoal() {
   const initialState = {
     date: "",
     caloriesGoal: "",
     currentCalories: "",
-    meals: "",
+    meals: "breakfast",
   };
 
   const [formState, setFormState] = useState(initialState);
@@ -40,7 +40,7 @@ export default function DailyGoal() {
 
         <label htmlFor="meals">Meals</label>
         <select name="meals" id="meals" type="select" value={formState.meals} onChange={handleChange}>
-        <option selected value="breakfast">Breakfast</option>
+        <option value="breakfast">Breakfast</option>
         <option value="lunch">Lunch</option>
         <option value="dinner">Dinner</option>
         </select>
