@@ -40,7 +40,7 @@ export default function DailyGoal() {
 
         <label htmlFor="meals">Meals</label>
         <select name="meals" id="meals" type="select" value={formState.meals} onChange={handleChange}>
-        <option value="breakfast">Breakfast</option>
+        <option selected value="breakfast">Breakfast</option>
         <option value="lunch">Lunch</option>
         <option value="dinner">Dinner</option>
         </select>
