@@ -39,7 +39,11 @@ export default function DailyGoal() {
         />
 
         <label htmlFor="meals">Meals</label>
-        <input name="meals" id="meals" type="text" value={formState.meals} onChange={handleChange}/>
+        <select name="meals" id="meals" type="select" value={formState.meals} onChange={handleChange}>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        </select>
         <button type='submit'>Submit</button>
       </form>
     </div>
