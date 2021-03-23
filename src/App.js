@@ -13,11 +13,11 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <button onClick={auth.handleLogout}>Log Me Out</button>
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Signup</Link>
         <Link to="/foods">Foods</Link>
         <Link to="/createDailyGoal">Daily Goal</Link>
+        <Link to="/signup">Signup</Link>
+        <Link to="/login">Login</Link>
+        <button onClick={auth.handleLogout}>Log Me Out</button>
       </nav>
       <Switch>
         <AnonRoute exact path="/login">
