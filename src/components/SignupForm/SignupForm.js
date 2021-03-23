@@ -48,7 +48,7 @@ export default function Signup() {
     </span>
   </p>
 </div>
- <div className="field">     
+<div className="field">     
 <p className="control">
         <button type="submit"class="button is-success">Sign Me Up</button>
         </p>
