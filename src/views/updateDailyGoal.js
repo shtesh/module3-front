@@ -1,17 +1,18 @@
+import React from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { updateDailyGoal } from "../services/dailyGoal.service";
+import { updateDailyGoal, getDailyGoal } from "../services/dailyGoal.service";
 
 function UpdateDailyGoal() {
   const { dailyGoalId } = useParams();
   const { push } = useHistory();
   const [dailyGoal, setDailyGoal] = React.useState({});
   React.useEffect(() => {
-    getDailyGoal().then(({ data }) => setDailyGoal(data));
+    getDailyGoal(dailyGoalId).then(({ data }) => setDailyGoal(data));
   }, [dailyGoalId]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const updatedDailyGoal = await updatedDailyGoal(dailyGoalId, dailyGoal);
+    const updatedDailyGoal = await updateDailyGoal(dailyGoalId, dailyGoal);
     push("/dailyGoals");
   };
 

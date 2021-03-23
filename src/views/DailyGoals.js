@@ -7,12 +7,12 @@ function UserDailyGoals() {
   React.useEffect(() => {
     getDailyGoals().then(({ data }) => setDailyGoals(data));
   }, []);
-
+console.log(dailyGoals)
   return (
     <div>
       {dailyGoals.map((goal) => (
         <div>
-          <p>{goals.date}</p>
+          <p>{goal.date}</p>
           <Link to={`/dailyGoal/${goal._id}`}>View details</Link>
         </div>
       ))}

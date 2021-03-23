@@ -10,13 +10,9 @@ export const createDailyGoal= (dailyGoal) => {
     return dailyGoalApi.post("/", dailyGoal)
 }
 
-export const getDailyGoal = (dailyGoal) => {
-  return dailyGoalApi.get("/:dailyGoal", dailyGoal)
-}
+export const getDailyGoal = dailyGoalId => dailyGoalApi.get(`/${dailyGoalId}`)
 
-// export const getDailyGoals = (dailyGoal) => {
-//   return dailyGoalApi.get("/dailyGoal/dailyGoals", dailyGoals)
-// }
+export const getDailyGoals = () => dailyGoalApi.get("/")
 
 export const updateDailyGoal = (dailyGoal) => {
   return dailyGoalApi.patch("/:dailyGoal", updateDailyGoal)

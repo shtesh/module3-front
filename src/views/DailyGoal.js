@@ -1,3 +1,4 @@
+import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { getDailyGoal } from "../services/dailyGoal.service";
 
@@ -6,7 +7,7 @@ function DailyGoalDetail() {
   const { dailyGoalId } = useParams();
   const [dailyGoal, setDailyGoal] = React.useState({});
   React.useEffect(() => {
-    getDailyGoal().then(({ data }) => setDailyGoal(data));
+    getDailyGoal(dailyGoalId).then(({ data }) => setDailyGoal(data));
   }, [dailyGoalId]);
 
   return (
@@ -15,7 +16,8 @@ function DailyGoalDetail() {
       <p>{dailyGoal.caloriesGoal}</p>
       <p>{dailyGoal.currentCalories}</p>
       <p>{dailyGoal.meals}</p>
-      <Link to={`/dailyGoal/${goal._id}/edit`}>Edit</Link>
+      <Link to={`/dailyGoal/${dailyGoal._id}/edit`}>Edit</Link>
     </div>
   );
 }
+export default DailyGoalDetail
