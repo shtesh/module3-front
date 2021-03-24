@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { getDailyGoals } from "../services/dailyGoal.service";
+import { getDailyGoals } from '../services/dailyGoal.service.js';
 
 function UserDailyGoals() {
   const [dailyGoals, setDailyGoals] = React.useState([]);

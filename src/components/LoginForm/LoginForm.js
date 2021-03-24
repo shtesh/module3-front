@@ -51,7 +51,7 @@ export default function Login() {
         </div>
         <div className="field">
           <p className="control">
-            <button type="submit" class="button is-info">
+            <button type="submit" className="button is-info">
               Log Me In
             </button>
           </p>
