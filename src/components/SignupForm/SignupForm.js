@@ -48,6 +48,14 @@ export default function Signup() {
     </span>
   </p>
 </div>
+<div className="field">
+  <div className="control">
+    <label htmlFor="checkbox" className="checkbox">
+      <input type="checkbox" className="checkbox mx-1"/>
+      I agree to the <a href="">terms & conditions</a>
+    </label>
+  </div>
+</div>
 <div className="field">     
 <p className="control">
         <button type="submit"class="button is-success">Sign Me Up</button>
