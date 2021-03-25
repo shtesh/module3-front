@@ -92,7 +92,7 @@ const mockedFoods = [
 {
   name: "Eggplant",
   calories: 35,
-  image: "https://lh3.googleusercontent.com/proxy/v5ec4vEW3bt7SGnqB4V_TgEpSegkIA_RpNhhY_B6OFnRSYlNx2KWnkzumJ5uSoke1XtyZOqlT_l31VGLspO7E0zjw9VPnQfBv_FUQktNWtsd4-534NiBMRYp",
+  image: "https://www.veggycation.com.au/siteassets/veggycationvegetable/eggplant.jpg",
   fat: 0.3,
   carbohydrates: 8.4,
   protein: 1.4,
