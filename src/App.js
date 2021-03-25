@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Link, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import FoodList from "./components/FoodList/FoodList";
 import { PrivateRoute, AnonRoute } from "./components/Routes";
 import Signup from "./components/SignupForm/SignupForm";
@@ -8,23 +8,13 @@ import DailyGoal from "./components/DailyGoal/DailyGoalForm";
 import DailyGoalDetail from "./views/DailyGoal";
 import UserDailyGoals from "./views/DailyGoals";
 import UpdateDailyGoal from "./views/UpdateDailyGoal";
-import { useAuth } from "./context/AuthContext.utils";
+import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 
 function App() {
-  const auth = useAuth();
   return (
     <div className="App">
-      <nav>
-        <Link to="/foods">Foods</Link>
-        <Link to="/createDailyGoal">Create Daily Goal</Link>
-        <Link to="/dailyGoal">Your Daily Goal</Link>
-        <Link to="/signup">Signup</Link>
-        <Link to="/login">Login</Link>
-        <button onClick={auth.handleLogout} className="button is-info">
-            Log Me Out
-        </button>
-      </nav>
+      <Navbar />
       <Switch>
         <AnonRoute exact path="/login">
           <Login />
@@ -41,13 +31,13 @@ function App() {
         <PrivateRoute path="/createDailyGoal">
           <DailyGoal />
         </PrivateRoute>
-        <PrivateRoute exact path='/dailyGoal'>
-<UserDailyGoals />
+        <PrivateRoute exact path="/dailyGoal">
+          <UserDailyGoals />
         </PrivateRoute>
         <PrivateRoute exact path="/dailyGoal/:dailyGoalId">
-        <DailyGoalDetail/>
+          <DailyGoalDetail />
         </PrivateRoute>
-        <PrivateRoute path="/dailyGoal/:dailyGoal/edit">
+        <PrivateRoute path="/dailyGoal/:dailyGoalId/edit">
           <UpdateDailyGoal />
         </PrivateRoute>
         <Route exact to="/">
