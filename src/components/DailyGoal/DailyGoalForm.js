@@ -1,33 +1,59 @@
 import React, { useState } from "react";
-import { createDailyGoal } from '../../services/dailyGoal.service';
+import { createDailyGoal } from "../../services/dailyGoal.service";
+import { useHistory } from "react-router-dom";
 
 export default function DailyGoal() {
   const initialState = {
-    date: "",
     caloriesGoal: "",
     currentCalories: "",
-    meals: "breakfast",
+    title: "",
+    description: "",
   };
-
+  const { push } = useHistory();
   const [formState, setFormState] = useState(initialState);
   const handleChange = ({ target }) => {
     setFormState({ ...formState, [target.name]: target.value });
   };
-  
+
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    const response=await createDailyGoal(formState);
-    console.log(response.data);
+    try {
+      event.preventDefault();
+      await createDailyGoal(formState);
+      push("/dailyGoal");
+    } catch (e) {}
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="date">Date</label>
-        <input name="date" id="date" type="date" value={formState.date} onChange={handleChange}/>
+        <label htmlFor="title">Title</label>
+        <input
+          name="title"
+          id="title"
+          type="text"
+          required
+          value={formState.date}
+          onChange={handleChange}
+        />
+
+        <label htmlFor="description">Description</label>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          onChange={handleChange}
+        />
 
         <label htmlFor="caloriesGoal">Calorie Goal</label>
-        <input name="caloriesGoal" id="caloriesGoal" type="number" value={formState.caloriesGoal} onChange={handleChange}/>
+        <input
+          name="caloriesGoal"
+          id="caloriesGoal"
+          type="number"
+          value={formState.caloriesGoal}
+          onChange={handleChange}
+          required
+        />
 
         <label htmlFor="currentCalories">Calorie Intake</label>
         <input
@@ -36,15 +62,10 @@ export default function DailyGoal() {
           type="number"
           value={formState.currentCalories}
           onChange={handleChange}
+          required
         />
 
-        <label htmlFor="meals">Meals</label>
-        <select name="meals" id="meals" type="select" value={formState.meals} onChange={handleChange}>
-        <option value="breakfast">Breakfast</option>
-        <option value="lunch">Lunch</option>
-        <option value="dinner">Dinner</option>
-        </select>
-        <button type='submit'>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

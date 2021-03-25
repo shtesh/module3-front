@@ -1,68 +1,62 @@
 import React from "react";
-import { updateDailyGoal, getDailyGoal } from "../services/dailyGoal.service";
+import { updateDailyGoal } from "../services/dailyGoal.service";
 import { useHistory, useParams } from "react-router-dom";
 
 function UpdateDailyGoal() {
   const { dailyGoalId } = useParams();
   const { push } = useHistory();
-  const [dailyGoal, setDailyGoal] = React.useState({});
-  React.useEffect(() => {
-    getDailyGoal(dailyGoalId).then(({ data }) => setDailyGoal(data));
-  }, [dailyGoalId]);
+  const initialState = {
+    title: "Breakfast",
+    description: "",
+    calories: 0,
+  };
+  const [dailyGoal, setDailyGoal] = React.useState(initialState);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const updatedDailyGoal = await updateDailyGoal(dailyGoalId, dailyGoal);
-    push("/dailyGoals");
+    try {
+      e.preventDefault();
+      await updateDailyGoal(dailyGoalId, dailyGoal);
+      push("/dailyGoals");
+    } catch (e) {}
   };
 
   const handleChange = ({ target }) => {
     setDailyGoal({ ...dailyGoal, [target.name]: target.value });
   };
+
   return (
     <div>
       <h1>{dailyGoal.date}</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="date">Date</label>
-        <input
-          name="date"
-          id="date"
-          type="date"
-          value={dailyGoal.date}
-          onChange={handleChange}
-        />
-
-        <label htmlFor="caloriesGoal">Calorie Goal</label>
-        <input
-          name="caloriesGoal"
-          id="caloriesGoal"
-          type="number"
-          value={dailyGoal.caloriesGoal}
-          onChange={handleChange}
-        />
-
-        <label htmlFor="currentCalories">Calorie Intake</label>
-        <input
-          name="currentCalories"
-          id="currentCalories"
-          type="number"
-          value={dailyGoal.currentCalories}
-          onChange={handleChange}
-        />
-
-        <label htmlFor="meals">Meals</label>
+        <label htmlFor="title">Meal Title</label>
         <select
-          name="meals"
-          id="meals"
+          name="title"
+          id="title"
           type="select"
           value={dailyGoal.meals}
           onChange={handleChange}
+          required
         >
-          <option value="breakfast">Breakfast</option>
-          <option value="lunch">Lunch</option>
-          <option value="dinner">Dinner</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Dinner">Dinner</option>
         </select>
-
+        <label htmlFor="calories">Calories</label>
+        <input
+          required
+          type="number"
+          name="calories"
+          id="calories"
+          onChange={handleChange}
+        />
+        <label htmlFor="description">Description</label>
+        <input
+          required
+          type="text"
+          name="description"
+          id="description"
+          onChange={handleChange}
+        />
         <button type="submit">Edit</button>
       </form>
     </div>
@@ -70,5 +64,3 @@ function UpdateDailyGoal() {
 }
 
 export default UpdateDailyGoal;
-
-

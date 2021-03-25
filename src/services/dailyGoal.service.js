@@ -6,14 +6,18 @@ const dailyGoalApi = axios.create({
   withCredentials: true,
 });
 
-export const createDailyGoal= (dailyGoal) => {
-    return dailyGoalApi.post("/", dailyGoal)
-}
+export const createDailyGoal = (dailyGoal) => {
+  return dailyGoalApi.post("/", dailyGoal);
+};
 
-export const getDailyGoal = dailyGoalId => dailyGoalApi.get(`/${dailyGoalId}`)
+export const getDailyGoal = (dailyGoalId) =>
+  dailyGoalApi.get(`/${dailyGoalId}`);
 
-export const getDailyGoals = () => dailyGoalApi.get("/")
+export const getDailyGoals = () => dailyGoalApi.get("/");
 
-export const updateDailyGoal = (dailyGoal) => {
-  return dailyGoalApi.patch("/:dailyGoal", updateDailyGoal)
-}
+export const updateDailyGoal = (dailyGoalId, dailyGoal) => {
+  return dailyGoalApi.patch(`/${dailyGoalId}`, dailyGoal);
+};
+
+export const deleteDailyGoal = (dailyGoalId) =>
+  dailyGoalApi.delete(`/${dailyGoalId}`);
