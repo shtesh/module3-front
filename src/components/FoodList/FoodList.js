@@ -291,7 +291,7 @@ class FoodList extends Component {
     return (
       <div className="container">
         <div className="section">
-          <h1 className="title">Food Tracker</h1>
+          <h1 className="title">Foodie Cap</h1>
 
           <Search searchFoods={this.filterFoods} />
 
@@ -319,7 +319,7 @@ class FoodList extends Component {
         </div>
 
         <div className="section">
-          <h2 id="todays-food-title">Today's foods</h2>
+          <h2 id="todays-food-title"></h2>
           {this.state.todayFood.length > 0 ? (
             <div>
               <ul>

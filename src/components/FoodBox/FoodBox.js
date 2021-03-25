@@ -30,11 +30,11 @@ class FoodBox extends Component {
           <div className="media-content">
             <div className="content">
               <p>
-                <strong>{name}</strong> <br />
-                <small>{calories} cal</small>
-                <small>Total fat(g):{fat}</small>
-                <small>Total carbohydrates(g): {carbohydrates}</small>
-                <small>Total protein(g): {protein}</small>
+                <strong>{name}</strong> <br/>
+                <small><strong>{calories}</strong> calories</small><br/>
+                <small>Total fat(g): <strong>{fat}</strong></small><br/>
+                <small>Total carbohydrates(g): <strong>{carbohydrates}</strong></small><br/>
+                <small>Total protein(g): <strong>{protein}</strong></small>
               </p>
             </div>
           </div>
