@@ -10,13 +10,13 @@ function Navbar() {
       {user?.isLogged ? (
         <>
           <Link to="/foods" style={space}>
-            Foods
+            Nutrition Facts
           </Link>
           <Link to="/createDailyGoal" style={space}>
-            Create Daily Goal
+            Set Daily Goal
           </Link>
           <Link to="/dailyGoal" style={space}>
-            Your Daily Goal
+            Your Foodprint
           </Link>
           <button
             onClick={handleLogout}

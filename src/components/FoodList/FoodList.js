@@ -294,14 +294,14 @@ class FoodList extends Component {
           <h1 className="title">Foodie Cap</h1>
 
           <Search searchFoods={this.filterFoods} />
-
+          <br />
           <div id="add-section">
-            <button className="button" onClick={this.toggleForm}>
+            <button className="button is-info" onClick={this.toggleForm}>
               Add Food
             </button>
             {this.state.showForm ? <AddNewFood addFood={this.addFood} /> : null}
           </div>
-
+          <br />
           <div className="columns">
             <div className="column">
               {this.state.filteredFoodsList.map((food, index) => {
