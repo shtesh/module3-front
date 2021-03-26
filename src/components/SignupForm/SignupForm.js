@@ -16,12 +16,12 @@ export default function Signup() {
     await auth.handleSignup(formState);
   };
   return (
-    <div className="control">
+    <div className="field">
       <form onSubmit={handleSubmit}>
-        <div className="field">
+        <div className="control">
           <label htmlFor="email">Email</label>
           <div className="control">
-          <p className="control has-icons-left has-icons-right">
+          <p className="control has-icons-left">
             <input
               type="email"
               name="email"
@@ -34,12 +34,12 @@ export default function Signup() {
             <span className="icon is-small is-left">
               <i className="fas fa-envelope"></i>
             </span>
-          </p>
-        </div>
+            </p>
+            </div>
         </div>
         <div className="field">
           <label htmlFor="password">Password</label>
-          <p className="control has-icons-left">
+          <p className="control has-icons-left ">
             <input
               type="password"
               name="password"
