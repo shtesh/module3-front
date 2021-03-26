@@ -20,6 +20,7 @@ export default function Signup() {
       <form onSubmit={handleSubmit}>
         <div className="field">
           <label htmlFor="email">Email</label>
+          <div className="control">
           <p className="control has-icons-left has-icons-right">
             <input
               type="email"
@@ -27,11 +28,14 @@ export default function Signup() {
               id="email"
               value={formState.email}
               onChange={handleChange}
+              className="input"
+              placeholder="jack@gmail.com"
             />
             <span className="icon is-small is-left">
               <i className="fas fa-envelope"></i>
             </span>
           </p>
+        </div>
         </div>
         <div className="field">
           <label htmlFor="password">Password</label>
@@ -42,6 +46,8 @@ export default function Signup() {
               id="password"
               value={formState.password}
               onChange={handleChange}
+              className="input"
+              placeholder="********"
             />
             <span className="icon is-small is-left">
               <i className="fas fa-lock"></i>

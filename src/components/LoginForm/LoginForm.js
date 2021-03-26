@@ -28,6 +28,8 @@ export default function Login() {
               id="email"
               value={formState.email}
               onChange={handleChange}
+              placeholder="jack@gmail.com"
+              className="input"
             />
             <span className="icon is-small is-left">
               <i className="fas fa-envelope"></i>
@@ -43,6 +45,8 @@ export default function Login() {
               id="password"
               value={formState.password}
               onChange={handleChange}
+              placeholder="********"
+              className="input"
             />
             <span className="icon is-small is-left">
               <i className="fas fa-lock"></i>
