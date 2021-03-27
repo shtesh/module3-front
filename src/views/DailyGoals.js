@@ -17,7 +17,8 @@ function UserDailyGoals() {
           <p>description: {goal.description}</p>
           <p>calories goal: {goal.caloriesGoal}</p>
           <p>date: {goal.createdAt}</p>
-          <Link to={`/dailyGoal/${goal._id}`}>View details</Link>
+          <button className="button is-logo"><Link to={`/dailyGoal/${goal._id}`}><span><i class="fab fa-wpexplorer"></i></span>  View details</Link></button>
+          
         </div>
       ))}
     </div>
