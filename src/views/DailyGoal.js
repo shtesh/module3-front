@@ -31,8 +31,8 @@ function DailyGoalDetail() {
           </div>
         ))}
       </div>
-      <Link to={`/dailyGoal/${dailyGoal._id}/edit`}>Edit</Link>
-      <button onClick={handleDelete} className="delete">Delete</button>
+      <button className="button is-logo"><Link to={`/dailyGoal/${dailyGoal._id}/edit`}><i className="far fa-edit"></i>Edit</Link></button>
+      <button onClick={handleDelete} className="button is-danger"><span className="delete"></span>Delete</button>
     </div>
   );
 }
