@@ -2,7 +2,7 @@ import React from "react";
 import { updateDailyGoal } from "../services/dailyGoal.service";
 import { useHistory, useParams } from "react-router-dom";
 
-function UpdateDailyGoal() {
+export function UpdateDailyGoal() {
   const { dailyGoalId } = useParams();
   const { push } = useHistory();
   const initialState = {
@@ -63,4 +63,4 @@ function UpdateDailyGoal() {
   );
 }
 
-export default UpdateDailyGoal;
+

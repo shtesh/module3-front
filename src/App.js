@@ -8,6 +8,7 @@ import DailyGoal from "./components/DailyGoal/DailyGoalForm";
 import DailyGoalDetail from "./views/DailyGoal";
 import UserDailyGoals from "./views/DailyGoals";
 import Navbar from "./components/Navbar/Navbar";
+import {UpdateDailyGoal} from "./views/UpdateDailyGoal";
 import "./App.css";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 
@@ -35,7 +36,7 @@ function App() {
           <UserDailyGoals />
         </PrivateRoute>
         <PrivateRoute path="/dailyGoal/:dailyGoalId/edit">
-          <h1>Update</h1>
+          <UpdateDailyGoal />
         </PrivateRoute>
         <PrivateRoute exact path="/dailyGoal/:dailyGoalId">
           <DailyGoalDetail />
