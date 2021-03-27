@@ -7,10 +7,10 @@ import Login from "./components/LoginForm/LoginForm";
 import DailyGoal from "./components/DailyGoal/DailyGoalForm";
 import DailyGoalDetail from "./views/DailyGoal";
 import UserDailyGoals from "./views/DailyGoals";
-import UpdateDailyGoal from "./views/UpdateDailyGoal";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+import UpdateDailyGoal from "./views/UpdateDailyGoal";
 
 function App() {
   return (
