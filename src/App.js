@@ -46,20 +46,50 @@ function App() {
         </Route>
         <Route path="*">
           <ErrorBoundary>
-          <BuggyComponent />
+            <BuggyComponent />
           </ErrorBoundary>
         </Route>
       </Switch>
     </div>
   );
+  const delay = () => new Promise((res) => setTimeout(() => res(true), 2000));
+  const error = () => {
+    throw new Error("error");
+  };
+
   function BuggyComponent() {
     const [state, setState] = React.useState([]);
-    return(
+    const [isLoading, setIsLoading] = React.useState(false);
+    const [error, setError] = React.useState(false);
+
+    async function getData() {
+      try {
+        setIsLoading(true);
+        error();
+        setState(["ready", "steady", "go"]);
+        setIsLoading(false);
+      } catch (e) {
+        console.error(e);
+        setError(true);
+        setIsLoading(false);
+      }
+    }
+    React.useEffect(() => {
+      getData();
+    }, []);
+
+    if (error) {
+      return <h2>Error</h2>;
+    }
+    if (isLoading) {
+      return <h2>Loading...</h2>;
+    }
+    return (
       <div>
         {state.map((value) => (
           <p>value</p>
         ))}
-        <button onClick = {() => setState({})}>break</button>
+        <button onClick={() => setState({})}>break</button>
       </div>
     );
   }
