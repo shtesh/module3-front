@@ -32,7 +32,7 @@ function DailyGoalDetail() {
         ))}
       </div>
       <Link to={`/dailyGoal/${dailyGoal._id}/edit`}>Edit</Link>
-      <button onClick={handleDelete}>delete</button>
+      <button onClick={handleDelete} className="delete">Delete</button>
     </div>
   );
 }
