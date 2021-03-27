@@ -8,9 +8,8 @@ import DailyGoal from "./components/DailyGoal/DailyGoalForm";
 import DailyGoalDetail from "./views/DailyGoal";
 import UserDailyGoals from "./views/DailyGoals";
 import Navbar from "./components/Navbar/Navbar";
-import { UpdateDailyGoal } from "./views/updateDailyGoal";
+import { UpdateDailyGoal } from "./views/Update/UpdateDailyGoal";
 import "./App.css";
-import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 
 function App() {
   return (

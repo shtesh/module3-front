@@ -1,5 +1,5 @@
 import React from "react";
-import { updateDailyGoal } from "../services/dailyGoal.service";
+import { updateDailyGoal } from "../../services/dailyGoal.service";
 import { useHistory, useParams } from "react-router-dom";
 
 export function UpdateDailyGoal() {
@@ -62,5 +62,3 @@ export function UpdateDailyGoal() {
     </div>
   );
 }
-
-
