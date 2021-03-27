@@ -10,6 +10,7 @@ import UserDailyGoals from "./views/DailyGoals";
 import UpdateDailyGoal from "./views/UpdateDailyGoal";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 
 function App() {
   return (
@@ -43,9 +44,25 @@ function App() {
         <Route exact to="/">
           <h1>Home</h1>
         </Route>
+        <Route path="*">
+          <ErrorBoundary>
+          <BuggyComponent />
+          </ErrorBoundary>
+        </Route>
       </Switch>
     </div>
   );
+  function BuggyComponent() {
+    const [state, setState] = React.useState([]);
+    return(
+      <div>
+        {state.map((value) => (
+          <p>value</p>
+        ))}
+        <button onClick = {() => setState({})}>break</button>
+      </div>
+    );
+  }
 }
 
 export default App;
