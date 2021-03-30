@@ -27,7 +27,7 @@ export default function DailyGoal() {
     <div className="box mr-6 ml-6">
       <form onSubmit={handleSubmit}>
           <div className="field">
-        <label htmlFor="title">Date</label>
+        <label htmlFor="title"><i className="far fa-clock"></i> Date</label>
         <input
           name="title"
           id="title"
@@ -39,7 +39,7 @@ export default function DailyGoal() {
         />
           </div>
           <div className="field">
-        <label htmlFor="description">Consumed Food</label>
+        <label htmlFor="description"><i className="fas fa-carrot"></i> Consumed Food</label>
         <textarea
           name="description"
           id="description"
@@ -50,7 +50,7 @@ export default function DailyGoal() {
         />
 </div>
 <div className="field">
-        <label htmlFor="caloriesGoal">Calorie Goal</label>
+        <label htmlFor="caloriesGoal"><i className="fas fa-bullseye"></i> Calorie Goal</label>
         <input
           name="caloriesGoal"
           id="caloriesGoal"
@@ -62,7 +62,7 @@ export default function DailyGoal() {
         />
 </div>
 <div className="field">
-        <label htmlFor="currentCalories">Calorie Intake</label>
+        <label htmlFor="currentCalories"><i className="fas fa-fish"></i> Calorie Intake</label>
         <input
           name="currentCalories"
           id="currentCalories"

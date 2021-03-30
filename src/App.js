@@ -41,7 +41,6 @@ function App() {
           <DailyGoalDetail />
         </PrivateRoute>
         <Route exact to="/">
-          <h1>Home</h1>
         </Route>
         <Route path="*">
           <h1>Not Found</h1>
