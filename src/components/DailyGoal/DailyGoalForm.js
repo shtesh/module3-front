@@ -24,9 +24,10 @@ export default function DailyGoal() {
   };
 
   return (
-    <div>
+    <div className="box mr-6 ml-6">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Title</label>
+          <div className="field">
+        <label htmlFor="title">Date</label>
         <input
           name="title"
           id="title"
@@ -34,17 +35,21 @@ export default function DailyGoal() {
           required
           value={formState.date}
           onChange={handleChange}
+          className="input"
         />
-
-        <label htmlFor="description">Description</label>
+          </div>
+          <div className="field">
+        <label htmlFor="description">Consumed Food</label>
         <textarea
           name="description"
           id="description"
           cols="30"
           rows="10"
           onChange={handleChange}
+          className="input"
         />
-
+</div>
+<div className="field">
         <label htmlFor="caloriesGoal">Calorie Goal</label>
         <input
           name="caloriesGoal"
@@ -53,8 +58,10 @@ export default function DailyGoal() {
           value={formState.caloriesGoal}
           onChange={handleChange}
           required
+          className="input"
         />
-
+</div>
+<div className="field">
         <label htmlFor="currentCalories">Calorie Intake</label>
         <input
           name="currentCalories"
@@ -63,9 +70,10 @@ export default function DailyGoal() {
           value={formState.currentCalories}
           onChange={handleChange}
           required
+          className="input"
         />
-
-        <button type="submit">Submit</button>
+</div>
+        <button type="submit" className="button is-info">Submit</button>
       </form>
     </div>
   );
