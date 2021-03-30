@@ -16,7 +16,7 @@ export function UpdateDailyGoal() {
     try {
       e.preventDefault();
       await updateDailyGoal(dailyGoalId, dailyGoal);
-      push("/dailyGoals");
+      push("/dailyGoal");
     } catch (e) {}
   };
 
