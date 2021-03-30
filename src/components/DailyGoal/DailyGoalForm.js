@@ -31,7 +31,7 @@ export default function DailyGoal() {
         <input
           name="title"
           id="title"
-          type="text"
+          type="date"
           required
           value={formState.date}
           onChange={handleChange}
