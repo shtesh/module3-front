@@ -15,7 +15,7 @@ export default function Login() {
     event.preventDefault();
     await auth.handleLogin(formState);
   };
-  console.log("inside");
+
   return (
     <div className="control">
       <form onSubmit={handleSubmit}>

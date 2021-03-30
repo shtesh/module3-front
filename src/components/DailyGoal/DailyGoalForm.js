@@ -26,54 +26,64 @@ export default function DailyGoal() {
   return (
     <div className="box mr-6 ml-6">
       <form onSubmit={handleSubmit}>
-          <div className="field">
-        <label htmlFor="title"><i className="far fa-clock"></i> Date</label>
-        <input
-          name="title"
-          id="title"
-          type="date"
-          required
-          value={formState.date}
-          onChange={handleChange}
-          className="input"
-        />
-          </div>
-          <div className="field">
-        <label htmlFor="description"><i className="fas fa-carrot"></i> Consumed Food</label>
-        <textarea
-          name="description"
-          id="description"
-          cols="30"
-          rows="10"
-          onChange={handleChange}
-          className="input"
-        />
-</div>
-<div className="field">
-        <label htmlFor="caloriesGoal"><i className="fas fa-bullseye"></i> Calorie Goal</label>
-        <input
-          name="caloriesGoal"
-          id="caloriesGoal"
-          type="number"
-          value={formState.caloriesGoal}
-          onChange={handleChange}
-          required
-          className="input"
-        />
-</div>
-<div className="field">
-        <label htmlFor="currentCalories"><i className="fas fa-fish"></i> Calorie Intake</label>
-        <input
-          name="currentCalories"
-          id="currentCalories"
-          type="number"
-          value={formState.currentCalories}
-          onChange={handleChange}
-          required
-          className="input"
-        />
-</div>
-        <button type="submit" className="button is-info">Submit</button>
+        <div className="field">
+          <label htmlFor="title">
+            <i className="far fa-clock"></i> Date
+          </label>
+          <input
+            name="title"
+            id="title"
+            type="date"
+            required
+            value={formState.date}
+            onChange={handleChange}
+            className="input"
+          />
+        </div>
+        <div className="field">
+          <label htmlFor="description">
+            <i className="fas fa-carrot"></i> Consumed Food
+          </label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="10"
+            onChange={handleChange}
+            className="input"
+          />
+        </div>
+        <div className="field">
+          <label htmlFor="caloriesGoal">
+            <i className="fas fa-bullseye"></i> Calorie Goal
+          </label>
+          <input
+            name="caloriesGoal"
+            id="caloriesGoal"
+            type="number"
+            value={formState.caloriesGoal}
+            onChange={handleChange}
+            required
+            className="input"
+          />
+        </div>
+        <div className="field">
+          <label htmlFor="currentCalories">
+            <i className="fas fa-fish"></i> Calorie Intake
+          </label>
+          <input
+            name="currentCalories"
+            id="currentCalories"
+            type="number"
+            value={formState.currentCalories}
+            onChange={handleChange}
+            required
+            className="input"
+          />
+        </div>
+        <button type="submit" className="button is-info">
+          Submit
+        </button>
       </form>
     </div>
   );
