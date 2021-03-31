@@ -28,7 +28,7 @@ export function UpdateDailyGoal() {
     <div>
       <h1>{dailyGoal.date}</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Meal Title</label>
+        <label htmlFor="title" className="label"><i className="fas fa-utensils"></i> Meal Title</label>
         <select
           name="title"
           id="title"
@@ -41,7 +41,7 @@ export function UpdateDailyGoal() {
           <option value="Lunch">Lunch</option>
           <option value="Dinner">Dinner</option>
         </select>
-        <label htmlFor="calories">Calories</label>
+        <label htmlFor="calories" className="label"><i className="fas fa-cookie-bite"></i> Calories</label>
         <input
           required
           type="number"
@@ -49,7 +49,7 @@ export function UpdateDailyGoal() {
           id="calories"
           onChange={handleChange}
         />
-        <label htmlFor="description">Description</label>
+        <label htmlFor="description" className="label"><i className="fas fa-mortar-pestle"></i> Description</label>
         <input
           required
           type="text"
@@ -57,7 +57,7 @@ export function UpdateDailyGoal() {
           id="description"
           onChange={handleChange}
         />
-        <button type="submit">Edit</button>
+        <button type="submit" className="button is-link">Edit</button>
       </form>
     </div>
   );
