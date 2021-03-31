@@ -26,7 +26,6 @@ function App() {
           <FoodList />
         </PrivateRoute>
         <PrivateRoute path="/private">
-          <h2>this is private</h2>
         </PrivateRoute>
         <PrivateRoute path="/createDailyGoal">
           <DailyGoal />

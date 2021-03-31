@@ -37,7 +37,7 @@ class AddNewFood extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <div className="field">
-            <label className="label">Name</label>
+            <label className="label"><i class="fas fa-file-signature"></i> Name</label>
             <div className="control">
               <input
                 className="input"
@@ -50,7 +50,7 @@ class AddNewFood extends Component {
           </div>
 
           <div className="field">
-            <label className="label">Calories</label>
+            <label className="label"><i className="fas fa-weight"></i> Calories</label>
             <div className="control">
               <input
                 className="input"
@@ -63,7 +63,7 @@ class AddNewFood extends Component {
           </div>
 
           <div className="field">
-            <label className="label">Image</label>
+            <label className="label"><i className="fas fa-image"></i> Image</label>
             <div className="control">
               <input
                 className="input"
@@ -76,7 +76,7 @@ class AddNewFood extends Component {
           </div>
 
           <div className="field">
-            <label className="label">Total Fat(g)</label>
+            <label className="label"><i className="fas fa-hamburger"></i> Total Fat(g)</label>
             <div className="control">
               <input
                 className="input"
@@ -89,7 +89,7 @@ class AddNewFood extends Component {
           </div>
 
           <div className="field">
-            <label className="label">Total Carbohydrates(g)</label>
+            <label className="label"><i className="fas fa-pizza-slice"></i> Total Carbohydrates(g)</label>
             <div className="control">
               <input
                 className="input"
@@ -102,7 +102,7 @@ class AddNewFood extends Component {
           </div>
 
           <div className="field">
-            <label className="label">Total Protein(g)</label>
+            <label className="label"><i className="fas fa-egg"></i> Total Protein(g)</label>
             <div className="control">
               <input
                 className="input"
