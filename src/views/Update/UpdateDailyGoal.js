@@ -25,9 +25,11 @@ export function UpdateDailyGoal() {
   };
 
   return (
-    <div>
+    <div className="box mr-6 ml-6">
       <h1>{dailyGoal.date}</h1>
       <form onSubmit={handleSubmit}>
+      <div className="field">
+          <div className="control">
         <label htmlFor="title" className="label"><i className="fas fa-utensils"></i> Meal Title</label>
         <select
           name="title"
@@ -41,6 +43,10 @@ export function UpdateDailyGoal() {
           <option value="Lunch">Lunch</option>
           <option value="Dinner">Dinner</option>
         </select>
+        </div>
+        </div>
+        <div className="field">
+          <div className="control">
         <label htmlFor="calories" className="label"><i className="fas fa-cookie-bite"></i> Calories</label>
         <input
           required
@@ -49,15 +55,29 @@ export function UpdateDailyGoal() {
           id="calories"
           onChange={handleChange}
         />
+        </div>
+        </div>
+        <div className="field">
+          <div className="control">
         <label htmlFor="description" className="label"><i className="fas fa-mortar-pestle"></i> Description</label>
-        <input
+        <div className="control">
+        <textarea
           required
-          type="text"
+          type="textarea"
+          className="textarea has-fixed-size"
+          cols="10"
+          rows="10"
           name="description"
           id="description"
+          placeholder="e.g. bagel"
           onChange={handleChange}
-        />
-        <button type="submit" className="button is-link">Edit</button>
+        ></textarea>
+        </div>
+        </div>
+        </div>
+        <div className="control">
+        <button type="submit" className="button is-link"><i className="far fa-edit"></i> Edit</button>
+        </div>
       </form>
     </div>
   );
